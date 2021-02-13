@@ -1,13 +1,19 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class Activity301 extends AppCompatActivity implements View.OnClickListener{
+
+    private String player1 = "";
+    private String player2 = "";
 
     int player1Score = 301;
     int player2Score = 301;
@@ -119,6 +125,15 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
         TextView displayPlayer2Score = (TextView)findViewById(R.id.score2);
         displayPlayer2Score.setText(String.valueOf(player2Score));
 
+        Intent intent = getIntent();
+        player1 = intent.getExtras().getString("player1");
+        player2 = intent.getExtras().getString("player2");
+
+        TextView displayPlayer1Name = (TextView)findViewById(R.id.joueur1);
+        displayPlayer1Name.setText(player1);
+
+        TextView displayPlayer2Name = (TextView)findViewById(R.id.joueur2);
+        displayPlayer2Name.setText(player2);
     }
 
 
@@ -140,10 +155,42 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
     public void substract(int score){
         if(currentPlayer == 1){
             player1Score = player1Score - score;
+            if (player1Score < 0){
+                player1Score = player1Score + score;
+            } else if (player1Score == 0){
+                System.out.println("Joueur 1 a gagné");
+                endGame();
+            }
         } else if(currentPlayer == 2) {
             player2Score = player2Score - score;
+            if (player2Score < 0){
+                player2Score = player2Score + score;
+            } else if (player2Score == 0){
+                System.out.println("Joueur 2 a gagné");
+                endGame();
+            }
         }
-
     }
+
+    public void finish(){
+        Intent intent = new Intent(this, PlayersActivity.class);
+        startActivity(intent);
+    }
+
+    private void endGame(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("C'est gagné pour le joueur " + currentPlayer + " ! ")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .create()
+                .show();
+    }
+
+
 
 }
