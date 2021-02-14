@@ -171,11 +171,24 @@ public class CricketActivity extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
     }
 
+    public void replay(){
+        Intent intent = new Intent(this, CricketActivity.class);
+        intent.putExtra("player1", player1);
+        intent.putExtra("player2", player2);
+        startActivity(intent);
+    }
+
     private void endGame(String winner){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("C'est gagné pour " + winner + " ! ")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Rejouer", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        replay();
+                    }
+                })
+                .setPositiveButton("Accueil", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();

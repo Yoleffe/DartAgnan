@@ -17,6 +17,7 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
 
     int player1Score = 0;
     int player2Score = 0;
+    int gameMode = 0;
 
     int currentPlayer = 1;
 
@@ -125,6 +126,7 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
         player2 = intent.getExtras().getString("player2");
         player1Score = intent.getExtras().getInt("gameMode");
         player2Score = intent.getExtras().getInt("gameMode");
+        gameMode = intent.getExtras().getInt("gameMode");
 
         TextView displayPlayer1Score = (TextView)findViewById(R.id.score1);
         displayPlayer1Score.setText(String.valueOf(player1Score));
@@ -180,11 +182,26 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
         startActivity(intent);
     }
 
+    public void replay(){
+        Intent intent = new Intent(this, Activity301.class);
+        intent.putExtra("player1", player1);
+        intent.putExtra("player2", player2);
+        intent.putExtra("gameMode", gameMode);
+        startActivity(intent);
+    }
+
+
     private void endGame(String winner){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setTitle("C'est gagné pour " + winner + " ! ")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Rejouer", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        replay();
+                    }
+                })
+                .setPositiveButton("Accueil", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
