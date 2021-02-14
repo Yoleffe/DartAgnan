@@ -162,7 +162,7 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
                 player1Score = player1Score + score;
             } else if (player1Score == 0){
                 System.out.println("Joueur 1 a gagné");
-                endGame();
+                endGame(player1);
             }
         } else if(currentPlayer == 2) {
             player2Score = player2Score - score;
@@ -170,7 +170,7 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
                 player2Score = player2Score + score;
             } else if (player2Score == 0){
                 System.out.println("Joueur 2 a gagné");
-                endGame();
+                endGame(player2);
             }
         }
     }
@@ -180,10 +180,10 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
         startActivity(intent);
     }
 
-    private void endGame(){
+    private void endGame(String winner){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setTitle("C'est gagné pour le joueur " + currentPlayer + " ! ")
+        builder.setTitle("C'est gagné pour " + winner + " ! ")
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

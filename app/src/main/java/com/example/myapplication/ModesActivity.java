@@ -34,4 +34,11 @@ public class ModesActivity extends AppCompatActivity {
         intent.putExtra("player2", player2);
         startActivity(intent);
     }
+
+    public void choiceCricket(View view){
+        Intent intent = new Intent(this, CricketActivity.class);
+        intent.putExtra("player1", player1);
+        intent.putExtra("player2", player2);
+        startActivity(intent);
+    }
 }
