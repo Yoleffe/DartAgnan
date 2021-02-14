@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="choice"/>
+        android:onClick="choiceThree"/>
 
     <Button
         android:id="@+id/button501"
@@ -25,7 +25,8 @@
         android:text="501"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button301" />
+        app:layout_constraintTop_toBottomOf="@+id/button301"
+        android:onClick="choiceFive"/>
 
     <Button
         android:id="@+id/buttonCricket"

@@ -19,8 +19,17 @@ public class ModesActivity extends AppCompatActivity {
         player2 = intent.getExtras().getString("player2");
     }
 
-    public void choice(View view) {
+    public void choiceThree(View view) {
         Intent intent = new Intent(this, Activity301.class);
+        intent.putExtra("gameMode", 301);
+        intent.putExtra("player1", player1);
+        intent.putExtra("player2", player2);
+        startActivity(intent);
+    }
+
+    public void choiceFive(View view){
+        Intent intent = new Intent(this, Activity301.class);
+        intent.putExtra("gameMode", 501);
         intent.putExtra("player1", player1);
         intent.putExtra("player2", player2);
         startActivity(intent);

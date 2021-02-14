@@ -21,7 +21,7 @@ public class PlayersActivity extends AppCompatActivity {
     public void validatePlayers(View view) {
         getPlayers();
         Intent intent = new Intent(this, ModesActivity.class);
-        intent.putExtra("player1 ", player1);
+        intent.putExtra("player1", player1);
         intent.putExtra("player2", player2);
         startActivity(intent);
     }

@@ -15,8 +15,8 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
     private String player1 = "";
     private String player2 = "";
 
-    int player1Score = 301;
-    int player2Score = 301;
+    int player1Score = 0;
+    int player2Score = 0;
 
     int currentPlayer = 1;
 
@@ -120,19 +120,22 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
 
         nextPlayer.setOnClickListener(this);
 
-        TextView displayPlayer1Score = (TextView)findViewById(R.id.score1);
-        displayPlayer1Score.setText(String.valueOf(player1Score));
-        TextView displayPlayer2Score = (TextView)findViewById(R.id.score2);
-        displayPlayer2Score.setText(String.valueOf(player2Score));
-
         Intent intent = getIntent();
         player1 = intent.getExtras().getString("player1");
         player2 = intent.getExtras().getString("player2");
+        player1Score = intent.getExtras().getInt("gameMode");
+        player2Score = intent.getExtras().getInt("gameMode");
+
+        TextView displayPlayer1Score = (TextView)findViewById(R.id.score1);
+        displayPlayer1Score.setText(String.valueOf(player1Score));
+
+        TextView displayPlayer2Score = (TextView)findViewById(R.id.score2);
+        displayPlayer2Score.setText(String.valueOf(player2Score));
 
         TextView displayPlayer1Name = (TextView)findViewById(R.id.joueur1);
-        displayPlayer1Name.setText(player1);
-
         TextView displayPlayer2Name = (TextView)findViewById(R.id.joueur2);
+
+        displayPlayer1Name.setText(player1);
         displayPlayer2Name.setText(player2);
     }
 
