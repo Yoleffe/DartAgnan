@@ -156,7 +156,7 @@ public class CricketActivity extends AppCompatActivity implements View.OnClickLi
                 && cptPlayer1[4][1] == 3
                 && cptPlayer1[5][1] == 3
                 && cptPlayer1[6][1] == 3
-                && player1Score > player2Score
+                && player1Score >= player2Score
                 ){
             endGame(player1);
         } else if (cptPlayer2[0][1] == 3
@@ -166,7 +166,7 @@ public class CricketActivity extends AppCompatActivity implements View.OnClickLi
                 && cptPlayer2[4][1] == 3
                 && cptPlayer2[5][1] == 3
                 && cptPlayer2[6][1] == 3
-                && player2Score > player1Score
+                && player2Score >= player1Score
         ){
             endGame(player2);
         }
