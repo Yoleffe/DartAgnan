@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class Activity301 extends AppCompatActivity implements View.OnClickListener{
 
     private String player1 = "";
@@ -47,7 +49,7 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_301);
+        setContentView(R.layout.activity_01);
 
         score20 = (Button) findViewById(R.id.button20);
         score19 = (Button) findViewById(R.id.button19);
@@ -139,15 +141,20 @@ public class Activity301 extends AppCompatActivity implements View.OnClickListen
 
         displayPlayer1Name.setText(player1);
         displayPlayer2Name.setText(player2);
-    }
 
+        TextView displayRound = (TextView)findViewById(R.id.textRoundOf);
+        displayRound.setText("C'est au tour de " + player1);
+    }
 
     @Override
     public void onClick(View v) {
+        TextView displayRound = (TextView)findViewById(R.id.textRoundOf);
         if((int) v.getTag() == 100 && currentPlayer == 1){
             currentPlayer = 2;
+            displayRound.setText("C'est au tour de " + player2);
         } else if ((int) v.getTag() == 100 && currentPlayer == 2){
             currentPlayer = 1;
+            displayRound.setText("C'est au tour de " + player1);
         } else {
             substract((int) v.getTag());
             TextView displayPlayer1Score = (TextView)findViewById(R.id.score1);

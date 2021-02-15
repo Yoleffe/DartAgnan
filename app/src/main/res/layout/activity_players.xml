@@ -31,7 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:hint="Joueur 1" />
+            android:hint="Joueur 1"
+            android:maxLength="10"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,7 +51,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:hint="Joueur 2" />
+            android:hint="Joueur 2"
+            android:maxLength="10"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
