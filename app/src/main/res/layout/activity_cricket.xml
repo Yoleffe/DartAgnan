@@ -6,278 +6,361 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/player1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/playersNamesC"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:text="@+id/player1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+id/player2"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.728"
-        app:layout_constraintStart_toEndOf="@+id/player1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/scorePlayer1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:text="@+id/scorePlayer1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/player1" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/scorePlayer2"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="@+id/player1"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="@+id/player2"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playersScoresC"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@+id/scorePlayer2"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.73"
-        app:layout_constraintStart_toEndOf="@+id/scorePlayer1"
-        app:layout_constraintTop_toBottomOf="@+id/player2" />
-
-    <TextView
-        android:id="@+id/score20Player1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="12dp"
-        android:text="@+id/score20Player1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scorePlayer1" />
+        app:layout_constraintTop_toBottomOf="@+id/playersNamesC"
+        android:layout_margin="10dp">
 
-    <TextView
-        android:id="@+id/score19Player1"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/scorePlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="@+id/scorePlayer1"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/scorePlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="@+id/scorePlayer2"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score20C"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score19Player1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score20Player1" />
+        app:layout_constraintTop_toBottomOf="@+id/playersScoresC">
 
-    <TextView
-        android:id="@+id/score18Player1"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/score20Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score20Player1"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/score20"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="20"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/score20Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score20Player2"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score19C"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score18Player1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score19Player1" />
+        app:layout_constraintTop_toBottomOf="@+id/score20C">
 
-    <TextView
-        android:id="@+id/score17Player1"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/score19Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score19Player1"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/score19"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="19"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/score19Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score19Player2"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score18C"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score17Player1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score18Player1" />
+        app:layout_constraintTop_toBottomOf="@+id/score19C">
 
-    <TextView
-        android:id="@+id/score16Player1"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/score18Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score18Player1"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/score18"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="18"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/score18Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score18Player2"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score17C"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score16Player1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score17Player1" />
+        app:layout_constraintTop_toBottomOf="@+id/score18C">
 
-    <TextView
-        android:id="@+id/score15Player1"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/score17Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score17Player1"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/score17"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="17"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/score17Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score17Player2"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score16C"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score15Player1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score16Player1" />
+        app:layout_constraintTop_toBottomOf="@+id/score17C">
 
-    <TextView
-        android:id="@+id/scoreBullPlayer1"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/score16Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score16Player1"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/score16"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="16"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/score16Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score16Player2"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/score15C"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="28dp"
-        android:text="@+id/scoreBullPlayer1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/score15Player1" />
+        app:layout_constraintTop_toBottomOf="@+id/score16C">
 
-    <Button
-        android:id="@+id/score20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:text="20"
-        app:layout_constraintStart_toEndOf="@+id/score20Player1"
-        app:layout_constraintTop_toBottomOf="@+id/scorePlayer1" />
+        <TextView
+            android:id="@+id/score15Player1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score15Player1"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
 
-    <Button
-        android:id="@+id/score19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:text="19"
-        app:layout_constraintStart_toEndOf="@+id/score19Player1"
-        app:layout_constraintTop_toBottomOf="@+id/score20" />
+        <Button
+            android:id="@+id/score15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="15"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
 
-    <Button
-        android:id="@+id/score18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:text="18"
-        app:layout_constraintStart_toEndOf="@+id/score18Player1"
-        app:layout_constraintTop_toBottomOf="@+id/score19" />
+        <TextView
+            android:id="@+id/score15Player2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/score15Player2"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/score17"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/scoreBullC"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:text="17"
-        app:layout_constraintStart_toEndOf="@+id/score17Player1"
-        app:layout_constraintTop_toBottomOf="@+id/score18" />
-
-    <Button
-        android:id="@+id/score16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:text="16"
-        app:layout_constraintStart_toEndOf="@+id/score16Player1"
-        app:layout_constraintTop_toBottomOf="@+id/score17" />
-
-    <Button
-        android:id="@+id/score15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:text="15"
-        app:layout_constraintStart_toEndOf="@+id/score15Player1"
-        app:layout_constraintTop_toBottomOf="@+id/score16" />
-
-    <Button
-        android:id="@+id/scoreBull"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:text="BULL"
-        app:layout_constraintStart_toEndOf="@+id/scoreBullPlayer1"
-        app:layout_constraintTop_toBottomOf="@+id/score15" />
-
-    <TextView
-        android:id="@+id/score20Player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@+id/score20Player2"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toEndOf="@+id/score20"
-        app:layout_constraintTop_toBottomOf="@+id/scorePlayer2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score15C">
 
-    <TextView
-        android:id="@+id/score19Player2"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/scoreBullPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/scoreBullPlayer1"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/scoreBull"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="BULL"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/scoreBullPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@+id/scoreBullPlayer2"
+            android:gravity="center"
+            android:layout_weight="33"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nextPlayerC"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score19Player2"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toEndOf="@+id/score19"
-        app:layout_constraintTop_toBottomOf="@+id/score20Player2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreBullC">
 
-    <TextView
-        android:id="@+id/score18Player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score18Player2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toEndOf="@+id/score18"
-        app:layout_constraintTop_toBottomOf="@+id/score19Player2" />
+        <Button
+            android:id="@+id/nextPlayerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="JOUEUR SUIVANT"
+            android:layout_margin="10dp"/>
 
-    <TextView
-        android:id="@+id/score17Player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score17Player2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toEndOf="@+id/score17"
-        app:layout_constraintTop_toBottomOf="@+id/score18Player2" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/score16Player2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/roundOfC"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score16Player2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
-        app:layout_constraintStart_toEndOf="@+id/score16"
-        app:layout_constraintTop_toBottomOf="@+id/score17Player2" />
-
-    <TextView
-        android:id="@+id/score15Player2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@+id/score15Player2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
-        app:layout_constraintStart_toEndOf="@+id/score15"
-        app:layout_constraintTop_toBottomOf="@+id/score16Player2" />
-
-    <TextView
-        android:id="@+id/scoreBullPlayer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@+id/scoreBullPlayer2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toEndOf="@+id/scoreBull"
-        app:layout_constraintTop_toBottomOf="@+id/score15Player2" />
-
-    <Button
-        android:id="@+id/nextPlayerButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Joueur Suivant"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scoreBull" />
+        app:layout_constraintTop_toBottomOf="@+id/nextPlayerC">
+
+        <TextView
+            android:id="@+id/textRoundOfC"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="100"
+            android:gravity="center"
+            android:text="@+id/textRoundOfC"
+            android:textSize="30dp" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -98,16 +98,22 @@ public class CricketActivity extends AppCompatActivity implements View.OnClickLi
         displayPlayer1Name.setText(player1);
         displayPlayer2Name.setText(player2);
 
+        TextView displayRound = (TextView)findViewById(R.id.textRoundOfC);
+        displayRound.setText("C'est au tour de " + player1);
+
         displayCounters();
     }
 
 
     @Override
     public void onClick(View v) {
+        TextView displayRound = (TextView)findViewById(R.id.textRoundOfC);
         if((int) v.getTag() == 100 && currentPlayer == 1){
             currentPlayer = 2;
+            displayRound.setText("C'est au tour de " + player2);
         } else if ((int) v.getTag() == 100 && currentPlayer == 2){
             currentPlayer = 1;
+            displayRound.setText("C'est au tour de " + player1);
         } else {
             scoreCount((int) v.getTag());
             TextView displayPlayer1Score = (TextView)findViewById(R.id.scorePlayer1);
