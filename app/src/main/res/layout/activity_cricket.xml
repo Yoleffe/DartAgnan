@@ -94,7 +94,8 @@
             android:layout_height="match_parent"
             android:text="20"
             android:layout_weight="33"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/blue" />
 
         <TextView
             android:id="@+id/score20Player2"
@@ -130,7 +131,8 @@
             android:layout_height="match_parent"
             android:text="19"
             android:layout_weight="33"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/blue"/>
 
         <TextView
             android:id="@+id/score19Player2"
@@ -166,7 +168,8 @@
             android:layout_height="match_parent"
             android:text="18"
             android:layout_weight="33"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/blue"/>
 
         <TextView
             android:id="@+id/score18Player2"
@@ -202,7 +205,8 @@
             android:layout_height="match_parent"
             android:text="17"
             android:layout_weight="33"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/blue"/>
 
         <TextView
             android:id="@+id/score17Player2"
@@ -238,7 +242,8 @@
             android:layout_height="match_parent"
             android:text="16"
             android:layout_weight="33"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/blue"/>
 
         <TextView
             android:id="@+id/score16Player2"
@@ -274,7 +279,8 @@
             android:layout_height="match_parent"
             android:text="15"
             android:layout_weight="33"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/blue"/>
 
         <TextView
             android:id="@+id/score15Player2"
@@ -310,7 +316,8 @@
             android:layout_height="match_parent"
             android:text="BULL"
             android:layout_weight="33"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/blue"/>
 
         <TextView
             android:id="@+id/scoreBullPlayer2"
@@ -337,7 +344,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="100"
             android:text="JOUEUR SUIVANT"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/blue"/>
 
     </LinearLayout>
 

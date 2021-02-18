@@ -6,37 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".PlayersActivity">
 
-    <Button
-        android:id="@+id/button301"
-        android:layout_width="157dp"
-        android:layout_height="95dp"
-        android:layout_marginTop="100dp"
-        android:text="301"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="choiceThree"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/button501"
-        android:layout_width="157dp"
-        android:layout_height="95dp"
-        android:layout_marginTop="100dp"
-        android:text="501"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button301"
-        android:onClick="choiceFive"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisissez un mode de jeu !"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"/>
 
-    <Button
-        android:id="@+id/buttonCricket"
-        android:layout_width="157dp"
-        android:layout_height="95dp"
-        android:layout_marginTop="100dp"
-        android:text="CRICKET"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button501"
-        android:onClick="choiceCricket"/>
+        <Button
+            android:id="@+id/button301"
+            android:layout_width="157dp"
+            android:layout_height="95dp"
+            android:text="301"
+            android:onClick="choiceThree"
+            android:backgroundTint="@color/blue"/>
+
+        <Button
+            android:id="@+id/button501"
+            android:layout_width="157dp"
+            android:layout_height="95dp"
+            android:text="501"
+            android:onClick="choiceFive"
+            android:backgroundTint="@color/blue"/>
+
+        <Button
+            android:id="@+id/buttonCricket"
+            android:layout_width="157dp"
+            android:layout_height="95dp"
+            android:text="CRICKET"
+            android:onClick="choiceCricket"
+            android:backgroundTint="@color/blue"/>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
